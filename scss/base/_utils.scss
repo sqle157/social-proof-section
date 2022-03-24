@@ -1,0 +1,23 @@
+@use './mixins' as *;
+
+.container {
+	width: min(90%, 70rem);
+	margin: auto;
+}
+
+.grid-inner {
+	display: grid;
+	grid-template-columns: 0.5fr 2.5fr;
+	column-gap: 1.25rem;
+	row-gap: 0.5rem;
+}
+
+.grid-top {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@include mq(50em) {
+		grid-template-columns: 1.125fr 1.5fr;
+		row-gap: 5rem;
+	}
+}

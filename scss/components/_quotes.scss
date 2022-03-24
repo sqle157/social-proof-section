@@ -1,0 +1,58 @@
+@use '../base' as *;
+
+.quotes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	gap: 1rem;
+	color: var(--clr-neutral-100);
+	grid-column: 1/-1;
+
+	@include mq(50em) {
+		gap: 2rem;
+	}
+
+	div {
+		background-color: var(--clr-primary-700);
+		border-radius: 0.5em;
+		padding: 2.1rem;
+		text-align: left;
+		max-width: 25rem;
+		margin-inline: auto;
+
+		@include mq(55em) {
+			&:nth-of-type(2) {
+				transform: translateY(1rem);
+			}
+			&:nth-of-type(3) {
+				transform: translateY(2rem);
+			}
+		}
+	}
+
+	img {
+		grid-column: 1 / 2;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	.name,
+	.status {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		align-self: center;
+	}
+
+	.name {
+		font-weight: 700;
+		margin-bottom: 2.5rem;
+	}
+
+	.status {
+		color: var(--clr-primary-400);
+	}
+
+	.quote__text {
+		grid-column: 1 / -1;
+	}
+}

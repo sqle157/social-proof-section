@@ -1,0 +1,69 @@
+@use '../base' as *;
+
+.ratings {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	margin-bottom: 5em;
+
+	@include mq(50em) {
+		align-self: center;
+		place-items: end;
+		margin-bottom: 0;
+	}
+
+	.rating {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: var(--clr-neutral-300);
+		padding: 0.5rem;
+		border-radius: 0.5em;
+		width: 100%;
+		max-width: 27.815rem;
+		margin-inline: auto;
+
+		.rating__stars {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100px;
+		}
+
+		p {
+			color: var(--clr-primary-700);
+			font-weight: 700;
+		}
+
+		@include mq(50em) {
+			padding: 1rem;
+			flex-direction: row;
+			align-items: center;
+			justify-content: start;
+			margin-inline: 0;
+
+			.rating__stars {
+				margin-inline: 1.5rem 2.5rem;
+			}
+		}
+
+		@include mq(67em) {
+			&:nth-of-type(1) {
+				transform: translateX(-6rem);
+			}
+
+			&:nth-of-type(2) {
+				transform: translateX(-3rem);
+			}
+		}
+	}
+
+	img {
+		margin: 0 0.25em 1em 0.25em;
+
+		@include mq(50em) {
+			margin-bottom: 0;
+		}
+	}
+}
