@@ -100,8 +100,8 @@ body {
 	padding-block: 5rem;
 	text-align: center;
 	font-weight: 400;
-	background-image: url(../../images/bg-pattern-top-mobile.svg),
-		url(../../images/bg-pattern-bottom-mobile.svg);
+	background-image: url(../images/bg-pattern-top-mobile.svg),
+		url(../images/bg-pattern-bottom-mobile.svg);
 	background-repeat: no-repeat;
 	background-position: top left, bottom right;
 	background-size: 100%, 100%;
@@ -109,8 +109,8 @@ body {
 
 @media only screen and (min-width: 37.5em) {
 	body {
-		background-image: url(../../images/bg-pattern-top-desktop.svg),
-			url(../../images/bg-pattern-bottom-desktop.svg);
+		background-image: url(../images/bg-pattern-top-desktop.svg),
+			url(../images/bg-pattern-bottom-desktop.svg);
 		background-repeat: no-repeat;
 		background-position: top left, bottom right;
 		background-size: 42%, 73%;
